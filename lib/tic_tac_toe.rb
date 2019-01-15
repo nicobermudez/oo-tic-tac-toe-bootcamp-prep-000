@@ -51,7 +51,6 @@ def turn
   else
     turn
   end
-  
 end  
 
 def turn_count
