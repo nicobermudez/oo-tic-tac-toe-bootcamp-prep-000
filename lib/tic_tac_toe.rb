@@ -66,4 +66,6 @@ def won?
 end
 
 def full?
-  @board.any
+  @board.any{|index| index = " "}
+end
+
