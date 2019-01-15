@@ -25,7 +25,7 @@ def display_board
 end
 
 def input_to_index(input)
-  input.to_i - log10
+  input.to_i - 1 
 end
 
 def move(index, token)
