@@ -41,17 +41,18 @@ def valid_move(index)
 end
 
 def turn
-  puts "Please enter 1-9: "
-  input = gets.strip
-  index = input_to_index(input)
-  char = current_player
-  if valid_move?(index) 
-    move(index, char) 
-    display_board
-  else
-    turn
-  end
-end  
+		puts "Please place select a space 1 - 9"
+		input = gets.chomp.strip
+		index = input_to_index(input)
+
+		if !valid_move?(index)
+			puts "Invalid Move!"
+      turn
+		else
+      @board[index] = current_player
+		end
+		display_board
+	end
 
 def turn_count
   n = 0 
