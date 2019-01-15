@@ -47,3 +47,7 @@ def turn
   char = current_player
   valid_move?(index) ? move(index, char) display_board : turn
 end  
+
+def turn_count
+  n = 0 
+  @board.each do |space|
