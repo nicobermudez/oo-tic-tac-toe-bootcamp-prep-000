@@ -66,6 +66,17 @@ def won?
 end
 
 def full?
-  @board.any{|index| index = " "}
+  @board.any{|index| index == " " || index == nil}
 end
+
+def draw?
+  (!@board.won? && @board.full?)
+end
+
+def over? 
+  (@board.won? || @board.draw)
+end
+
+def winner
+  
 
