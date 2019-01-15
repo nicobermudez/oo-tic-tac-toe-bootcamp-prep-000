@@ -66,4 +66,4 @@ def won?
 end
 
 def full?
-  
+  @board.any
