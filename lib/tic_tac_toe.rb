@@ -22,7 +22,17 @@ def display_board
   puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
   puts '-----------'
   puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
-en
+end
 
 def input_to_index(input)
-  input.to_i
+  input.to_i - log10
+end
+
+def move(index, token)
+  @board[index] = token
+end
+
+def position_taken?(index)
+  (@board[index] == "X" || @board[index] == "O"
+end
+
