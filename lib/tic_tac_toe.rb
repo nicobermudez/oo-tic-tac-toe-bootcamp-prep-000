@@ -50,4 +50,12 @@ end
 
 def turn_count
   n = 0 
-  @board.each do |space|
+  @board.each do |index|
+    if index == "X" || index=="O"
+      n+= 1
+    end
+  end
+  return n
+end
+
+def current_player
