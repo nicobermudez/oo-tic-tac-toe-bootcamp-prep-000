@@ -75,7 +75,7 @@ def won?
 end
 
 def full?
-  @board.detect?{|index| index == " "}
+  !@board.any?{|index| index == " "}
 end
 
 def draw?
