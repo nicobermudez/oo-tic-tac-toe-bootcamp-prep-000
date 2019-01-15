@@ -75,16 +75,16 @@ def full?
 end
 
 def draw?
-  (!@board.won? && @board.full?)
+  (!won? && full?)
 end
 
 def over? 
-  (@board.won? || @board.draw)
+  (won? || draw)
 end
 
 def winner(board)
-  if winning_combo = @board.won?
-    board[winning_combo.first]
+  if winning_combo = won?
+    @board[winning_combo.first]
   end
 end
 
