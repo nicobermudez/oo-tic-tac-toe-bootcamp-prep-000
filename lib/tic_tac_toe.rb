@@ -25,4 +25,4 @@ def display_board
 en
 
 def input_to_index(input)
-  input.to
+  input.to_i
