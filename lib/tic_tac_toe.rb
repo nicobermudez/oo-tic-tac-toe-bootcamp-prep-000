@@ -92,17 +92,14 @@ def winner
   end
 end
 
-	def play
-	  while !over?
-	    turn
-	  end
-
-	  if !winner.nil?
-	    puts "Congratulations #{winner}!"
-	  else
-	    puts "Cat's Game!"
-	  end
-	end
+def play
+  turn until over?
+  if won?
+    puts "Congratulations #{winner(board)}!"
+  elsif draw?
+    puts "Cat's Game!"
+  end
+end
 end
 
 
